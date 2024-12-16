@@ -13,6 +13,7 @@ nav {
     width: 50%;
     border-radius: 0px 0px 15px 15px;
     margin: auto;
+    flex-direction: column;
 }
 
 section {
@@ -33,10 +34,61 @@ header {
     justify-content: center;
 }
 
+header p {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F8F0FB;
+    margin: 10px;
+    transition: margin .5s;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+    margin: 20px;
+    font-size: larger;
+}
+
+section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    background-color: #252422;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+footer p {
+    width: 70%;
+}
+
+header a {
+    color: #F8F0FB;
+}
+
+#navLinks{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navButton{
+    display: none;
+}
 
 .gomb {
     display: inline-block;
-    margin: 10px;
+    margin: 0 10px 0 10px;
     padding: 5px;
     border-radius: 10px;
     transition: background-color .5s;
@@ -64,19 +116,6 @@ header {
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: #F8F0FB;
-    margin: 10px;
-    transition: margin .5s;
-}
-
-
-nav a:hover {
-    text-decoration: underline;
-    margin: 20px;
-    font-size: larger;
-}
 
 .gridContainer {
     display: grid;
@@ -148,25 +187,6 @@ nav a:hover {
     margin-top: 15px;
 }
 
-section form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer {
-    text-align: center;
-    background-color: #252422;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-footer p {
-    width: 70%;
-}
 
 .searchBar {
     width: 50%;
@@ -192,7 +212,7 @@ footer p {
 
 .login {
     background-color: #CCC5B9;
-    width: 20%;
+    width: 25%;
     height: 400px;
     border-radius: 20px;
     margin: auto;
@@ -225,6 +245,45 @@ footer p {
     padding-left: 10px;
 }
 
+.radio {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+.radioText {
+    font-size: 20px;
+}
+
+.submit {
+    margin: auto;
+    width: 60%;
+    margin-top: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.register {
+    background-color: #CCC5B9;
+    width: 30%;
+    height: 500px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 50px;
+    color: black;
+}
+
+@media only screen and (max-width: 1500px) {
+    .login {
+        width: 35%;
+    }
+}
 
 @media only screen and (max-width: 1400px) {
     .gridContainer1 {
@@ -252,6 +311,22 @@ footer p {
     section {
         width: 90%;
     }
+
+    .login {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .login {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login {
+        width: 55%;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -270,35 +345,89 @@ footer p {
     section {
         width: 90%;
     }
+
+    .login {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     section {
         width: 100%;
     }
+
+    .login {
+        width: 70%;
+    }
 }
+
+@media only screen and (max-width: 400px) {
+    .login {
+        width: 70%;
+    }
+}
+
 @media only screen and (max-width: 450px) {
     .gridContainer1 {
         grid-template-columns: 300px;
     }
+
     .listingKep {
         width: 250px;
         height: 250px;
     }
+
     .listingName {
         padding-left: 20px;
         margin: 0px;
         margin-top: 5px;
         font-size: 30px;
     }
-    
+
     .listingPrice {
         padding-left: 20px;
         margin: 0px;
         margin-top: 15px;
         font-size: 30px;
     }
+    header {
+        flex-direction: column;
+        gap: 0;
+        height: 100px;
+    }
+    .gombContainer {
+        justify-content: center;
+    }
+    .logoContainer {
+        justify-content: center;
+        height: 50px;
+    }
+
+    .navButton{
+        display: block;
+    }
+
+    #navLinks{
+        display: none;
+        flex-direction: column;
+    }
 }
+
+@media only screen and (min-width: 601px) {
+    nav{
+        height: 80px;
+    }
+
+    .navButton{
+        display: none;
+    }
+
+    #navLinks{
+        display: block;
+        flex-direction: row;
+    }
+}
+
 
 @media only screen and (max-width: 750px) {
     .gridContainer {
