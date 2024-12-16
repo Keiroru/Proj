@@ -13,7 +13,7 @@ nav {
     width: 50%;
     border-radius: 0px 0px 15px 15px;
     margin: auto;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 section {
@@ -74,12 +74,6 @@ footer p {
 
 header a {
     color: #F8F0FB;
-}
-
-#navLinks{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
 }
 
 .navButton{
@@ -157,11 +151,12 @@ header a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
 }
 
 .listingGridItem {
     background-color: #827e78c3;
-    padding-top: 15px;
+    padding-top: 20px;
     border-radius: 10px;
     padding-bottom: 10px;
 }
@@ -271,16 +266,25 @@ header a {
 
 .register {
     background-color: #CCC5B9;
-    width: 30%;
-    height: 500px;
+    width: 25%;
+    height: 450px;
     border-radius: 20px;
     margin: auto;
     margin-top: 50px;
     color: black;
 }
 
+@media only screen and (min-width: 1800px) {
+    .gridContainer1 {
+        grid-template-columns: 190px 190px 190px 190px 190px;
+    }
+}
+
 @media only screen and (max-width: 1500px) {
     .login {
+        width: 35%;
+    }
+    .register {
         width: 35%;
     }
 }
@@ -315,17 +319,24 @@ header a {
     .login {
         width: 40%;
     }
+    .register {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .login {
         width: 45%;
     }
+    .register {
+        width: 45%;
+    }
 }
 
-@media only screen and (max-width: 600px) {
-    .login {
-        width: 55%;
+
+@media only screen and (max-width: 750px) {
+    .gridContainer {
+        grid-template-columns: auto auto;
     }
 }
 
@@ -349,6 +360,24 @@ header a {
     .login {
         width: 50%;
     }
+    .register {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .login {
+        width: 55%;
+    }
+    .register {
+        width: 55%;
+    }
+    .loginH1 {
+        font-size: 25px;
+    }
+    .text {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -359,13 +388,11 @@ header a {
     .login {
         width: 70%;
     }
-}
-
-@media only screen and (max-width: 400px) {
-    .login {
+    .register {
         width: 70%;
     }
 }
+
 
 @media only screen and (max-width: 450px) {
     .gridContainer1 {
@@ -403,40 +430,10 @@ header a {
         height: 50px;
     }
 
-    .navButton{
-        display: block;
-    }
-
-    #navLinks{
-        display: none;
+    nav{
+        height: 160px;
         flex-direction: column;
     }
 }
 
-@media only screen and (min-width: 601px) {
-    nav{
-        height: 80px;
-    }
 
-    .navButton{
-        display: none;
-    }
-
-    #navLinks{
-        display: block;
-        flex-direction: row;
-    }
-}
-
-
-@media only screen and (max-width: 750px) {
-    .gridContainer {
-        grid-template-columns: auto auto;
-    }
-}
-
-@media only screen and (min-width: 1800px) {
-    .gridContainer1 {
-        grid-template-columns: 190px 190px 190px 190px 190px;
-    }
-}
