@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apróhirdetés</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
 
 <body>
@@ -32,17 +34,22 @@
   </header>
 
   <nav>
-    <a href="">item 1</a>
-    <a href="">item 1</a>
-    <a href="">item 1</a>
-    <a href="">item 1</a>
+    <a href="">Fő Oldal</a>
+    <a href="">Kategóriák</a>
+    <a href="">Ingatlanok</a>
+    <a href="">Járművek</a>
   </nav>
 
   <section>
-    <form action="/action_page.php">
-      <input type="text" placeholder="Mit Keresel?" name="search" class="searchBar">
-      <button type="submit" class="keresesButton">Keresés</button>
-    </form>
+    <div class="searchHolder">
+      <form action="/action_page.php">
+        <span class="material-symbols-outlined">
+          search
+        </span>
+        <input type="text" placeholder="Mit Keresel?" name="search" class="searchBar">
+        <button type="submit" class="keresesButton">Keresés</button>
+      </form>
+    </div>
   </section>
 
   <section>
